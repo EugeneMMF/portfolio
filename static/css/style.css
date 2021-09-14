@@ -198,7 +198,7 @@ p{
 }
 /*main section*/
 #main{
-    background-image: url("../img/How-Tech-is-Changing-the-Way-we-Work.jpg");
+    background-image: url(../img/How-Tech-is-Changing-the-Way-we-Work.jpg);
     background-size:contain;
     background-position: top center;
     position: relative;
