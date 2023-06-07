@@ -200,11 +200,8 @@ p{
 /*main section*/
 #main{
     background-image: url(../img/How-Tech-is-Changing-the-Way-we-Work.jpg);
-<<<<<<< HEAD
     background-size:cover;
-=======
     background-size:contain;
->>>>>>> 14f5a229858b981f1f38cd9b18b86e6fcae4185d
     background-position: top center;
     position: relative;
     z-index: 1;
