@@ -406,10 +406,10 @@ p{
     margin-bottom: 50px;
 }
 #projects .all-projects{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 #projects .project-item{
     display: flex;
@@ -527,6 +527,10 @@ p{
 
 /*end of abouts section*/
 /* start of contacts section */
+#contacts {
+    height: fit-content;
+}
+
 #contacts img{
     width: 30px;
     height: 30px;
