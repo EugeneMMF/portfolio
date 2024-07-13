@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Activated Lights</title>
+    <link rel="stylesheet" href="../static/css/style_documentation.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</head>
+<body>
+    <h1>Motion Activated Lights</h1>
+    <hr>
+    <div>
+        <h2>Understanding the Problem</h2>
+        <p>The goal is to make a set of 2 corridor lights switch on when a passerby walks down the corridor.</p>
+        <p>All the conditions below must be met for lighting.</p>
+        <ul>
+            <li><p>The lights only come on if motion is detected.</p></li>
+            <li><p>The corridor is dark.</p></li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Context</h2>
+        <p>There are two lights separated by some distance with two double pole single throw switches separated by some distance.</p>
+        <p>The diagram below illustrates the wiring diagram of the corridor from a top view.</p>
+        <img src="" alt="<img>">
+        <p>It is important to note that the corridor is quite long. This will be of great importance in the next sections.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Solution</h2>
+        <p>A passive infrared sensor was chosen to detect the motion. The chosen sensor was purchased from . Below is an image of the sensor.</p>
+        <img src="static/Screenshot 2024-07-05 at 19-41-39 HC-SR501 HC-SR505 AM312 Adjust IR Pyroelectric Infrared Mini PIR module Motion Sensor Detector Module Bracket For Arduino - AliExpress 502.png" alt="<img>">
+        <p>The sensor was chosen since it has provision for adjusting the detection distance as well as the on-time using potentiometers. It also has provision for a light dependent resistor (LDR). The sensor also has a wide range of 120degrees.</p>
+        <p>In the implementation of this sensor, the LDR may be used to prevent the sensor from outputing a detection signal when there is plenty of light. The PIR sensor has a 1M pull-up resistor in series with the LDR. The output of the PIR sensor can only be activated when motion is detected and the voltage at the common point between the resitor and the LDR is above 0.2V. Since the LDR's resistance reduces with increase in light intensity, when there is ample light, the common point voltage is pulled harder to ground, thus keeping the voltage below 0.2V.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Apparatus</h2>
+        <ul>
+            <li><a href="https://www.aliexpress.com/item/1005005140420875.html?spm=a2g0o.order_list.order_list_main.27.28061802jE4jm9">2 PIR sensors</a></li>
+            <li><a href="https://www.aliexpress.com/item/1005006186219833.html?spm=a2g0o.order_list.order_list_main.5.28061802jE4jm9">2 LDR sensor (GL5549)</a></li>
+            <li><a href="https://www.aliexpress.com/item/1005005958286862.html?spm=a2g0o.order_list.order_list_main.16.28061802jE4jm9">1 5V Relay (SRD-05VDC-SL-C)</a></li>
+            <li>1 Puff board</li>
+            <li><a href="https://www.aliexpress.com/item/33031439641.html?spm=a2g0o.order_list.order_list_main.21.28061802jE4jm9">1 5V USB Charger</a></li>
+            <li>3 2N2222A transistors</li>
+            <li>4 10k resistors</li>
+            <li>1 IRF540N MOSFET</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Implementation</h2>
+        <p>In order to achieve the requirements for switching on the lights, 2 PIR sensors were deployed. This was so as to cover the full range of the corridor. This is because the corridor was quite long and the angle of detection of the PIR sensors was 120degrees. They were placed with the angle between their center axis of vision at an angle of about 90degrees. This meant that they shared an angle of vision of </p>
+        <p>$$ {90 - \frac{120}{2} = 90 - 60 = 30 \deg} $$</p>
+        <p>And the full angle of vision was </p>
+        <p>$$ {2 * 120 - 30 = 210 \deg} $$</p>
+        <p>This means that we have a safety of 15 degrees on either side of the sensor, i.e. if the sensor's angle of vision is less than 120 degrees, it can be up to 90 degrees and we would still achieve full range of vision of 180 degrees.</p>
+        <p>To take ensure the light is switched on when either sensor was activated an OR gate was designed using transistors (2N2222A). This approach was taken over using an off-the-shelf OR-gate since it was cheaper. The output of the OR-gate was then fed to the gate of an N-channel MOSFET (IRF540N). The MOSFET's source was connected to ground and the drain connected to one coil terminal of a relay. The other coil terminal of the relay was connected directly to the 5V power source. One switched terminal of the relay was connected to the 240V AC line and the other connected to the light bulbs.</p>
+        <p>Below is the schematic of the implementation circuit.</p>
+        <img src="static/SCH_Schematic1_1-P1_2024-07-05.png" alt="<img>">
+    </div>
+    <hr>
+    <div>
+        <h2>Results</h2>
+        <p>Below is an assembly image of the circuit before being connected to the light bulb's wiring.</p>
+        <img src="static/adjusted_main_circuit.png" alt="<img>">
+        <p>The circuit worked, switching on the lights when someone passed through the corridor in the dark. It then maintained the light as long as the person moved and went off only when the person was no longer in the corridor or they stayed still for longer than about 1 minute (This was set using the on-time potentiometer on the PIR sensors).</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Recommendations</h2>
+        <ul>
+            <li>A better system could be implemented that keeps track of the number of people in the corridor and only switches off the lights when there are no people within the corridor.</li>
+            <li>A manual override could be added to allow for switching on of the lights regardless of the ambient light or the presence of motion.</li>
+        </ul>
+    </div>
+    <hr>
+    <section id="contacts">
+        <div class="contacts container">
+            <div class="email">
+                <p>By: <span>Eugene Mwangi</span></p>
+                <a href="mailto:eugmwanmwan@gmail.com">
+                    <img src="../templates/index_files/gmail.png">eugmwanmwan@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="links">
+            <a href="https://icons8.com/icon/lGkuyaJFdKtV/call-me">Call Me icon by Icons8</a>
+            <a href="https://icons8.com/icon/ZsqwnJaWUi9o/gmail-logo">Gmail logo icon by Icons8</a>
+            <a href="https://icons8.com/icon/59832/menu">Menu icon by Icons8</a>
+        </div>
+    </section>
+</body>
+</html>
