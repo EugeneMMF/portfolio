@@ -12,6 +12,15 @@ html{
     font-family: 'Montserrat', sans-serif;
     
 }
+li{
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5%;
+    width: fit-content;
+}
+ul{
+    width: 100%;
+}
 a{
     text-decoration: none;
 }
