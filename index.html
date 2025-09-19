@@ -1,241 +1,259 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE =edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=" text/css" href="static/css/style.css">
-    <title>My Portfolio</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Eugene Mwangi, a software and web developer specializing in modern web technologies.">
+  <meta name="keywords" content="Eugene Mwangi, Software Developer, Web Developer, Full-Stack, React, Node.js, Python">
+  <title>Eugene | Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="static/favicon-192x192.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#"><h1><span>E</span>ug<span>e</span>ne Mw<span>an</span>gi</h1></a>
+
+  <header id="main-header">
+    <div class="container">
+      <nav>
+        <a href="#hero" class="logo">Eugene</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="static/Eugene Mwangi CV.pdf" class="btn btn-primary" target="_blank" download>Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <h1>Eugene Mwangi</h1>
+          <p class="subtitle">Software & Web Developer</p>
+          <p class="description">I build elegant, responsive, and user-friendly web applications. With a strong foundation in modern JavaScript frameworks and a passion for clean code, I turn complex problems into beautiful digital solutions.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary" aria-label="View my work">My Work</a>
+            <a href="#contact" class="btn btn-secondary" aria-label="View my contacts">Contact Me</a>
+          </div>
         </div>
-        <div class="nav-list">
-          <div class="hamburger"><div class="bar"></div></div>
-          <ul>
-            <li><a href="#main" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Skills">Skills</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contacts" data-after="Contacts">Contacts</a></li>
-          </ul>
+        <div class="hero-image">
+          <img src="static/potrait.jpg" alt="A professional photo of Eugene">
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Header -->
+    </section>
 
-   <!--main section-->
-<section id="main" style="background-image: static/img/How-Tech-is-Changing-the-Way-we-Work.jpg;">
-    <div class="main container">
-        <div>
-            <h1>Hello,<span> </span></h1>
-            <h1>My name is<span> </span></h1>
-            <h1>Eugene Mwangi<span> </span></h1>
-            <!-- <a href="../../../html/trial.html" type="button" class="cta">Portfolio</a> -->
+    <section id="about" class="hidden">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm a dedicated software developer based in Nairobi. My journey in technology began with a fascination for how things work, which led me to the world of coding. I specialize in the MERN stack but I'm always excited to learn new technologies. I thrive in collaborative settings and am committed to writing clean, maintainable, and efficient code. When I'm not at my computer, I enjoy cycling, tinkering, and exploring new places.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="hidden">
+      <div class="container">
+        <h2>My Technical Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skills-list">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>Java</span>
+              <span>C/C++</span>
+              <span>Kotlin</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Frameworks & Libraries</h3>
+            <div class="skills-list">
+              <span>Node.js</span>
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>Angular</span>
+              <span>Express</span>
+              <span>Flask</span>
+              <span>Django</span>
+              <span>FastAPI</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <div class="skills-list">
+              <span>SQL</span>
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Expertise</h3>
+            <div class="skills-list">
+              <span>Backend</span>
+              <span>Frontend</span>
+              <span>RESTful APIs</span>
+              <span>Microservices</span>
+              <span>Docker</span>
+              <span>Git</span>
+              <span>Agile</span>
+              <span>Android Apps</span>
+              <span>Operating Systems</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Cloud, APIs & Design</h3>
+            <div class="skills-list">
+              <span>AWS</span>
+              <span>Google Cloud API</span>
+              <span>Figma</span>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <section id="projects" class="hidden">
+      <div class="container">
+        <h2>My Recent Work</h2>
+        <div class="projects-grid">
+          <div class="project-card hidden">
+            <img src="static/summarize.png" alt="Screenshot of SummarIze Extension">
+            <div class="card-content">
+              <h3>SummarIze Extension</h3>
+              <p>An intelligent browser extension that uses AI to instantly condense any webpage, selected text, files, or link into a concise summary. Interact directly with an on-page display to customize the output, specifying formatting and key topics to analyze. Get the information you need faster with powerful, AI-driven summarization at your fingertips.</p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://summarize.cloud" target="_blank" aria-label="View the SummarIze website">Go to the Website <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <img src="static/Sustain App.png" alt="Screenshot of Sustain App">
+            <div class="card-content">
+              <h3>Sustain App</h3>
+              <p>Transform complex sustainability reports into actionable insights with this AI-driven platform. Instantly visualize key metrics with dynamic, integrated graphing directly in the frontend. Dive deeper by interacting with a chat-based assistant to fine-tune analysis, query the document, and uncover critical data in a conversational way.</p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/EugeneMMF/sustain" target="_blank" aria-label="View the source code for the Sustain App on GitHub">Source Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <img src="static/tic-tac-toe-erasure.png" alt="Screenshot of Tic-tac-toe Erasure">
+            <div class="card-content">
+              <h3>Tic-Tac-Toe Erasure</h3>
+              <p>A strategic re-imagining of Tic-tac-toe where your oldest move is erased with every new turn, creating a dynamic challenge. Face off against a smart AI opponent with scalable difficulty, get in-game help with a unique assistance slider, and enjoy a polished experience with stunning visuals and motion effects. Prove your skill and track your mastery through a star-level ranking system.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://eugenemmf.github.io/erasure-tic-tac-toe" target="_blank" aria-label="View a live demo of the Tic-tac-toe erasure game">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/EugeneMMF/erasure-tic-tac-toe" target="_blank" aria-label="View the source code of the Tic-tac-toe erasure game on GitHub">Source Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <img src="static/sudoku-solver.png" alt="Screenshot of Sudoku Solver">
+            <div class="card-content">
+              <h3>Sudoku Solver</h3>
+              <p>From picture to solution in seconds. This solver uses AI computer vision to read a Sudoku puzzle from any uploaded image, instantly deciphering the grid. A powerful custom solving engine then takes over to crack the logic. The result isn't just data—it’s a custom-generated image from Pygame, with the solved cells elegantly highlighted, delivering a visually satisfying answer.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Pygame</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/EugeneMMF/sudoku-solver" target="_blank" aria-label="View the source code of the Sudoku solver on GitHub">Source Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <img src="static/debater.png" alt="Screenshot of AI Library">
+            <div class="card-content">
+              <h3>AI Debater</h3>
+              <p>Challenge your viewpoints with this versatile AI debate partner, accessible through a visually rich web app or a powerful Python CLI. Provide any topic, and the AI instantly crafts compelling arguments for both sides. Go head-to-head in a turn-based format, clicking through turns in a stunning interface or battling it out in your terminal to gain a deep understanding of any subject.</p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/EugeneMMF/ai-debater" target="_blank" aria-label="View the source code of the AI debater on GitHub">Source Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <img src="static/AI_octet.png" alt="Screenshot of AI Library">
+            <div class="card-content">
+              <h3>AI Library</h3>
+              <p>A custom Python AI library built from scratch to master the foundational pillars of artificial intelligence. This library offers intuitive modules for optimization, uncertainty, and logic, but its centerpiece is a machine learning engine designed for simplicity and power. It provides a user experience inspired by TensorFlow and PyTorch, but is uniquely optimized for blazing-fast CPU execution by leveraging multicore architectures and the power of NumPy.</p>
+              <div class="tech-stack">
+                <span>Python</span>
+                <span>NumPy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/EugeneMMF/AI" target="_blank" aria-label="View the source code for my AI library on GitHub">Source Code <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="hidden">
+      <div class="container contact-container">
+        <h2>Get In Touch</h2>
+        <p>I am currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to say hi, my inbox is always open!</p>
+        <a href="mailto:eugmwanmwan@gmail.com" class="btn btn-primary" aria-label="Send an email to me via eugmwanmwan@gmail.com">Say Hello</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/eugenemmf" target="_blank" aria-label="View my GitHub profile">GitHub</a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/eugene--0336a5224/" target="_blank" aria-label="View my LinkedIn profile">LinkedIn</a>
+      </div>
+      <p>&copy; 2025 Eugene Mwangi. All rights reserved.</p>
     </div>
-</section>
-   <!--end of main section-->
-   <!--Services section-->
-<section id="services" style="background-image: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgb(200, 3, 157) 40%, rgb(5, 68, 178) 100%);">
-    <div class="services container">
-        <div class="service-top">
-            <h1 class="section-title">Sk<span>i</span>lls</h1>
-            <p>Through the course of my lifetime, I have aquired an assortment of skills I have come to consider handy.</p>
-        </div>
-        <div class="service-bottom">
-            <div class="service-item">
-                <div class="icon"><img src="templates/index_files/services.png"></div>
-                <h2>AI</h2>
-                <p>I have worked with AI, building models from scratch using popular frameworks such as Tensorflow and PyTorch have built my own library entirely from scratch. I have also done several AI related projects including but not limited to Generative Adversarial Networks(GANs), Convolutional Nueral Networks(CNNs), Deep Neural Networks(DNNs), Sequential Data Models and Object Detection models.</p>
-                <p>In addition to working with predeveloped frameworks, I have coded my own library for machine learning from scratch using Python and tested it using known datasets like the MNIST dataset and MNIST Fashion dataset. I have also used it to carry out several side projects, but have resorted to pre-developed frameworks due to the faster training speed they offer.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon"><img src="templates/index_files/services.png"></div>
-                <h2>Android App Development</h2>
-                <p>I am knowledgeable in the programming of Android applications using Java and Kotlin. I have coded a number of programs: one was to solve the Wordle puzzle by NYTimes and another to solve the Android game 4pics 1word on Google PlayStore. I have also built an app that allows you to take pictures of Sudokus and sends the image to a server that has a program I wrote to process and solve the sudoku. Once it solves it, it sends back an image of the solved sudoku.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon"><img src="templates/index_files/services.png"></div>
-                <h2>Web Design</h2>
-                <p>I am proficient in the design and creation of websites and web applications. My strengths lie in coding in HTML and CSS as well as using frontend frameworks like React.js and Angular.js for websites. As for web applications, I am good at using Python: Flask, FastAPI, Django and JavaScript: Express for backends.</p>
-            </div>
-            <div class="service-item">
-                <div class="icon"><img src="templates/index_files/services.png"></div>
-                <h2>Programming</h2>
-                <p>I have knowledge and experience in programming of applications using:</p>
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Visual C++</li>
-                    <li>C#</li>
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <div class="icon"><img src="templates/index_files/services.png"></div>
-                <div class="heading"><h2>Microcontrollers and IoT</h2></div>
-                <p>My knowledge and understanding of C, C++, Python and MicroPython has enabled me to venture into IoT and I have gained considerable experience in this field from a number of projects I have undertaken involving several platforms like:</p>
-                <ul>
-                    <li>Raspberry Pi</li>
-                    <li>ESP32 Boards</li>
-                    <li>Arduino Boards</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-   <!--End of Services section-->
-   <!--Projects section background-image: linear-gradient(90deg, rgb(9, 0, 0) 0%, rgb(248, 245, 245) 50%, rgb(0,0,0) 100%);-->
-<section id="projects" style="background-image: linear-gradient(120deg, rgb(0, 0, 0) 0%, rgb(200, 3, 157) 40%, rgb(5, 68, 178) 100%);">
-    <div class="projects container">
-        <div class="projects-header">
-            <h1 class="section-title">Recent <span>Projects</span></h1>
-        </div>
-        <div class="all-projects">
-            <div class="project-item">
-                <a href="https://github.com/EugeneMMF/sustain" type="img">
-                <div class="project-info">
-                    <h1>AI Sustainability Report Analyzer</h1>
-                    <p>This is an interactive tool for analyzing sustainability reports, leveraging LLM models to extract data from the files and summarize the data, presenting the data in a more intuitive format, like graphs, plots and charts. The tool works by allowing users to drop their reports to upload them to the system, then ask the model via a chat interface for whatever inference they may need to derive from the report.</p>
-                </div>
-                <div class="project-img">
-                    <img src="static/img/Screenshot 2025-01-25 at 19-52-33 Sustain App.png" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://eugenemmf.github.io/erasure-tic-tac-toe" type="img">
-                <div class="project-info">
-                    <h1>Tic Tac Toe Erasure</h1>
-                    <p>This is a game where the user plays the computer on a grid of 3 by 3 in an attempt to have either 3 x's or 3 o's in a row or column or diagonal depending on whether they play with x's or o's respectively. The game has a twist where the board only stores 3 of the most recent plays, erasing past plays as you go.</p>
-                </div>
-                <div class="project-img">
-                    <img src="static/img/tic-tac-toe-erasure.png" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://github.com/EugeneMMF/sudoku-solver" type="img">
-                <div class="project-info">
-                    <h1>Sudoku Solver</h1>
-                    <p>This is a program that solves normal sudokus, i.e. 6x6, 9x9, 16x16 sudokus. There are two ways to go about inputing the sudoku: one can either enter the sudoku size of the smaller block and enter the prefilled values or they can take a photo and use the photo as input. In the latter case, the program has AI that analyses the image gets the corners of the grid, reshapes it to a square then runs character recognition to get the values in the cells. With this information it creates an object that can be solved and returns an image of the solved sudoku.</p>
-                </div>
-                <div class="project-img">
-                    <img src="static/img/resultfile2_server.png" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="ai_style_transfer.html" type="img">
-                <div class="project-info">
-                    <h1>AI Style Transfer</h1>
-                    <p>I built an AI model which takes in 2 images: a base image and a style image, and adds styling from the style image onto the base image with impecable results.</p>
-                </div>
-                <div class="project-img">
-                    <img src="templates/index_files/frosted_swan.jpg" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://github.com/EugeneMMF/AI" type="img">
-                <div class="project-info">
-                    <h1>AI Library</h1>
-                    <p>I built an AI library that performs the tasks associated with AI i.e. optimization, logic, unceratinty, and learning through machine learning. The library was built from scratch using Python. The initial version involved the manual operations of matrices using arrays, however, even with multiprocessing to perform multiple operations at a time the library was slower than using Numpy. Thus the library was permanently changed to use Numpy. It is avaliable on Github.</p>
-                </div>
-                <div class="project-img">
-                    <img src="static/img/Screenshot 2024-07-14 at 00-11-18 AI_octet_models.py at main · EugeneMMF_AI.png" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="#" type="img">
-                <div class="project-info">
-                    <h1>Online Shopping System</h1>
-                    <p>This is a system that like Amazon, Jumia, Ali Express and Alibaba allows for online customers to view and place orders on items they are interested in. It also tracks stock and displays this information to the owner of the store.</p>
-                </div>
-                <div class="project-img">
-                    <img src="templates/index_files/web_app.png" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="#" type="img">
-                <div class="project-info">
-                    <h1>Automatic Light Switching System</h1>
-                    <p>This is a system which uses sensors at the entrance of the door to automatically switch on and off the lights in a room. It works using lasers and photoresistors and keeps constant count of the number of people in the room.</p>
-                </div>
-                <div class="project-img">
-                    <img src="templates/index_files/IMG20210820172021.jpg" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="#" type="img">
-                <div class="project-info">
-                    <h1>Remote Controlled Servos</h1>
-                    <p>Two Arduino's are used to mimic the operation of a remote control toy. The communication between the two arduinos is via one cable connecting them that would transfer the details to control the servos.</p>
-                </div>
-                <div class="project-img">
-                    <img src="templates/index_files/IMG20210831173417.jpg" alt="img">
-                </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="#" type="img">
-                <div class="project-info">
-                    <h1>8 Figure Voltmeter</h1>
-                    <p>Two seven-segment four-digit led displays are used together with an Arduino to measure and display the potential difference across components on a circuit and display it to 8 significant figures.</p>
-                </div>
-                <div class="project-img">
-                    <img src="templates/index_files/Movies_20_20TV_208_31_2021_2010_36_27_20PM.png" alt="img">
-                </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-   <!--End of projects-->
-   <!--About section-->
-<section id="about" style="background-image: radial-gradient(rgb(255, 255, 255) 0%, rgb(200, 3, 157) 40%, rgb(5, 68, 178) 100%);">
-    <div class="about container">
-        <div class="col-left">
-            <div class="about-img">
-                <a href="" class="img"><img src="templates/index_files/IMG20240814100831.jpg" alt="img"></a>
-            </div>
-        </div>
-        <div class="col-right">
-            <h1 class="section-title">About <span>me</span></h1>
-            <h2>Software Developer</h2>
-            <p>I am a Software Developer with a bachelor's degree in Electrical and Electronics Engineering from The Univerity of Nairobi. I enjoy working on software projects to solve problems that most overlook. This involves developing either console programs or full applications with stunning UIs and robust backends.</p>
-            <a href="static/documents/EUGENE_MWANGI_MWANIKI_CV_23_01_2025.pdf" class="cta" download="static/documents/EUGENE_MWANGI_MWANIKI_CV_23_01_2025.pdf">Download Resume</a>
-        </div>
-    </div>
-    <div id="contacts" class="contacts container">
-        <div class="email">
-            <h1>Contact <span>Me</span></h1>
-            <a href="mailto:eugmwanmwan@gmail.com">
-                <img src="templates/index_files/gmail.png">eugmwanmwan@gmail.com
-            </a>
-            <p><img src="templates/index_files/call-me.png">+254746741955</p>
-        </div>
-    </div>
-    <div class="links">
-        <a href="https://icons8.com/icon/lGkuyaJFdKtV/call-me">Call Me icon by Icons8</a>
-        <a href="https://icons8.com/icon/ZsqwnJaWUi9o/gmail-logo">Gmail logo icon by Icons8</a>
-        <a href="https://icons8.com/icon/59832/menu">Menu icon by Icons8</a>
-    </div>
-</div>
-<!-- Code injected by live-server -->
-<script src="static/app.js">
-</script>
-</body></html>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
